@@ -302,7 +302,7 @@ button {
   }
 
   .home-img .img-box {
-    width: 300px;
+    width: 250px;
     margin: auto;
   }
 }
@@ -513,6 +513,7 @@ button {
   font-size: 16px;
   text-transform: capitalize;
   margin: 20px 0;
+  padding-left: 10px;
 }
 
 .portfolio-item-details {

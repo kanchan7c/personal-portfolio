@@ -56,48 +56,6 @@ const portfolioItemDetails = (portfolioItem) => {
     document.querySelector('.popup-body').innerHTML = portfolioItem.querySelector('.portfolio-item-details').innerHTML;
 }
 
-// navigation toggle function 
+// send message
 
-const navToggler = document.querySelector('.nav-toggler');
-
-navToggler.addEventListener('click', () => {
-
-    document.querySelector('.nav').classList.toggle('open');
-    document.querySelector('.home-section').classList.toggle('hidden');
-})
-
-//Menu option function 
-
-const home = document.querySelector('.home');
-const about = document.querySelector('.about');
-const portfolio = document.querySelector('.portfolio');
-const contact = document.querySelector('.contact');
-
-// home.addEventListener('click', () => {
-//     document.querySelector('.home-section').classList.toggle('hidden');
-//     document.querySelector('.nav-inner').classList.toggle('hidden');
-//     about.classList.add('hidden');
-//     portfolio.classList.add('hidden');
-//     contact.classList.add('hidden');
-// })
-
-// about.addEventListener('click', () => {
-//     document.querySelector('.about-section').classList.toggle('hidden');
-//     document.querySelector('.nav-inner').classList.toggle('hidden');
-//     portfolio.classList.add('hidden');
-//     contact.classList.add('hidden');
-// })
-
-// portfolio.addEventListener('click', () => {
-//     document.querySelector('.portfolio-section').classList.toggle('hidden');
-//     document.querySelector('.nav-inner').classList.toggle('hidden');
-//     about.classList.add('hidden');
-//     contact.classList.add('hidden');
-// })
-
-// contact.addEventListener('click', () => {
-//     document.querySelector('.contact-section').classList.toggle('hidden');
-//     document.querySelector('.nav-inner').classList.toggle('hidden');
-//     about.classList.add('hidden');
-//     portfolio.classList.add('hidden');
-// })
+document.querySelector('.message').addEventListener('click', () => alert('Thank you for showing your interest.'))

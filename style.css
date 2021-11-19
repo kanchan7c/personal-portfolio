@@ -105,6 +105,7 @@ section {
   max-width: 1200px;
   margin: auto;
   transition: all 0.5s ease-in-out;
+  position: relative;
 }
 
 .main.fade-out {
@@ -142,6 +143,10 @@ section {
   width: 100%;
   text-align: center;
   margin-bottom: 40px;
+}
+
+.flex-end {
+  justify-content: flex-end;
 }
 
 .section-title h2 {
@@ -205,6 +210,61 @@ button {
   font-family: inherit;
   user-select: none;
 }
+
+/* nav section styling  */
+
+.header {
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 1;
+  width: 100;
+  padding: 20px 0 0;
+}
+
+.header .nav-toggler {
+  width: 50px;
+  height: 50px;
+  border: none;
+  cursor: pointer;
+  border-radius: 50%;
+  background-color: var(--white-alpha-25);
+  border: 1px solid var(--white-alpha-40);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 15px;
+}
+
+.header .nav-toggler span {
+  height: 2px;
+  width: 24px;
+  background-color: var(--main-color);
+  position: relative;
+}
+
+.header .nav-toggler span::before,
+.header .nav-toggler span::after {
+  content: "";
+  height: 100%;
+  width: 100%;
+  background-color: var(--main-color);
+  position: absolute;
+}
+
+.header .nav-toggler span::before {
+  top: -8px;
+  left: 0;
+}
+
+.header .nav-toggler span::after {
+  top: 8px;
+  left: 0;
+}
+
+.header .nav {
+}
+
 /* Home section  */
 
 .home-section {
@@ -443,7 +503,7 @@ button {
 .portfolio-item h3 {
   font-size: 16px;
   text-transform: capitalize;
-  margin: 20px 5px;
+  margin: 20px 0;
 }
 
 .portfolio-item-details {
@@ -535,4 +595,87 @@ button {
 
 .popup-body .general-info li a {
   color: var(--main-color);
+}
+
+/* contact section styling  */
+
+.contact-form {
+}
+
+.contact-info {
+}
+
+.contact-form,
+.contact-info {
+  width: 50%;
+  padding: 0 15px;
+}
+
+.contact-form .input-group {
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+.contact-form .input-control::placeholder {
+  color: var(--text-dark);
+  opacity: 0.8;
+  font-weight: 300;
+}
+
+.contact-form .input-control:focus {
+  border-color: var(--white-alpha-40);
+}
+
+.contact-form .input-control {
+  display: block;
+  width: 100%;
+  height: 50px;
+  border-radius: 25px;
+  border: 1px solid transparent;
+  font-family: inherit;
+  font-weight: 400;
+  font-size: 16px;
+  background-color: var(--white-alpha-25);
+  padding: 0 20px;
+  color: var(--text-dark);
+  transition: border-color 0.3s ease;
+}
+
+.contact-form textarea.input-control {
+  height: 120px;
+  resize: none;
+  padding-top: 15px;
+}
+
+.contact-info-item {
+  margin: 0 0 30px;
+  padding: 0 0 20px;
+}
+
+.contact-info-item h3 {
+  font-size: 20px;
+  text-transform: capitalize;
+  margin: 0 0 5px;
+}
+
+.contact-info-item .social-links a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+  width: 40px;
+  background-color: var(--white-alpha-25);
+  border: 1px solid var(--white-alpha-40);
+  border-radius: 50%;
+  color: var(--main-color);
+  font-weight: 900;
+  font-size: 24px;
+  padding: 22px;
+  margin: 5px 4px 0 0;
+  transition: all 0.3s ease;
+}
+
+.contact-info-item .social-links a:hover {
+  color: var(--white);
+  background-color: var(--main-color);
 }

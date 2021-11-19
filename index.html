@@ -17,8 +17,33 @@
 <body>
     <!-- main start  -->
     <div class="main">
+
+        <!-- header start here  -->
+        <header class="header">
+            <div class="container">
+                <div class="row flex-end">
+                    <button class="nav-toggler">
+                        <span></span>
+                    </button>
+                    <nav class="nav">
+                        <div class="nav-inner">
+                            <ul>
+                                <li><a href="#" class="nav-item">home</a></li>
+                                <li><a href="#" class="nav-item">about</a></li>
+                                <li><a href="#" class="nav-item">portfolio</a></li>
+                                <li><a href="#" class="nav-item">contact</a></li>
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </header>
+
+        <!-- header end here  -->
+
+
         <!-- Home section start  -->
-        <section class="home-section align-items-center hidden">
+        <section class="home-section align-items-center">
             <div class="container">
                 <div class="row align-items-center">
                     <div class="home-text">
@@ -143,7 +168,7 @@
         <!-- About section end  -->
 
         <!-- Portfolio section start -->
-        <section class="portfolio-section">
+        <section class="portfolio-section section-padding hidden">
             <div class="container">
                 <div class="row">
                     <div class="section-title">
@@ -525,11 +550,53 @@
         <!-- Portfolio section start -->
 
         <!-- Contact section start here -->
-        <section class="contact-section">
+        <section class="contact-section section-padding hidden">
             <div class="container">
                 <div class="row">
                     <div class="section-title">
-
+                        <h2>Contact Me</h2>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="contact-form">
+                        <form>
+                            <div class="row">
+                                <div class="input-group">
+                                    <input type="text" class="input-control" placeholder="Name" required>
+                                </div>
+                                <div class="input-group">
+                                    <input type="email" class="input-control" placeholder="Email" required>
+                                </div>
+                                <div class="input-group">
+                                    <input type="text" class="input-control" placeholder="Subject" required>
+                                </div>
+                                <div class="input-group">
+                                    <textarea class="input-control"
+                                        placeholder="Type your message here... required"></textarea>
+                                </div>
+                                <div class="submit-btn">
+                                    <button type="submit" class="btn">Send Message</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="contact-info">
+                        <div class="contact-info-item">
+                            <h3>Email</h3>
+                            <p>kanchan.chaudhary77@gmail.com</p>
+                        </div>
+                        <div class="contact-info-item">
+                            <h3>Follow me</h3>
+                            <div class="social-links">
+                                <a href="https://www.facebook.com/profile.php?id=100010316479068" target="_blank"><i
+                                        class="bi bi-facebook"></i></a>
+                                <a href="https://twitter.com/KanchanSamajS" target="_blank"><i
+                                        class="bi bi-twitter"></i></a>
+                                <a href="https://www.linkedin.com/in/kanchan-chaudhary-a38568bb/" target="_blank"><i
+                                        class="bi bi-linkedin"></i></a>
+                                <a href="https://github.com/kanchan7c" target="_blank"><i class="bi bi-github"></i></a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

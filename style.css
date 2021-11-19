@@ -50,6 +50,10 @@ body {
   padding: 5vh 15px;
 }
 
+body.hide-scrolling {
+  overflow-y: hidden;
+}
+
 body::before {
   content: "";
   position: fixed;
@@ -85,6 +89,10 @@ img {
   vertical-align: middle;
 }
 
+ul {
+  list-style: none;
+}
+
 section {
   background-color: rgba(255, 255, 255, 0.253);
   border: 1px solid rgba(255, 255, 255, 0.3);
@@ -96,6 +104,11 @@ section {
 .main {
   max-width: 1200px;
   margin: auto;
+  transition: all 0.5s ease-in-out;
+}
+
+.main.fade-out {
+  opacity: 0;
 }
 
 .container {
@@ -428,11 +441,98 @@ button {
 }
 
 .portfolio-item h3 {
-  font-size: 20px;
+  font-size: 16px;
   text-transform: capitalize;
-  margin: 20px 0;
+  margin: 20px 5px;
 }
 
 .portfolio-item-details {
   display: none;
+}
+
+/* Portfolio popup styling goes here */
+
+.portfolio-popup {
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 200;
+  padding: 50px 0;
+  visibility: hidden;
+}
+.portfolio-popup.open {
+  visibility: visible;
+  overflow-y: auto;
+}
+
+.popup-inner {
+  min-height: 100vh;
+  padding-bottom: 40px 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.popup-content {
+  background-color: var(--white-alpha-25);
+  padding: 30px;
+  border-radius: 30px;
+  max-width: 900px;
+  width: 100%;
+  border: 1px solid var(--white-alpha-40);
+  backdrop-filter: var(--backdrop-filter-blur);
+  opacity: 0;
+  transform: scale(0.9);
+}
+
+.portfolio-popup.open .popup-content {
+  opacity: 1;
+  transform: scale(1);
+  transition: all 0.5s ease;
+}
+
+.popup-header {
+  position: relative;
+}
+
+.popup-header .btn {
+  height: 40px;
+  width: 40px;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  right: -40px;
+  top: -40px;
+}
+
+.popup-thumbnail img {
+  border-radius: 10px;
+}
+
+.popup-header h3 {
+  font-size: 25px;
+  text-transform: capitalize;
+  margin: 20px 0 15px;
+}
+
+.popup-body .description {
+  margin-bottom: 20px;
+}
+
+.popup-body .general-info li {
+  margin-bottom: 10px;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+
+.popup-body .general-info li span {
+  font-weight: 400;
+}
+
+.popup-body .general-info li a {
+  color: var(--main-color);
 }

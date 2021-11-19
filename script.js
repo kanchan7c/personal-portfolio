@@ -27,3 +27,34 @@ experience.addEventListener('click', () => {
     }
 
 })
+
+// portfolio item details popup 
+
+document.addEventListener('click', (e) => {
+    if (e.target.classList.contains('view-project-btn')) {
+        togglePopup();
+        document.querySelector('.portfolio-popup').scrollTo(0, 0);
+        portfolioItemDetails(e.target.parentElement);
+    }
+})
+
+const togglePopup = () => {
+    document.querySelector('.portfolio-popup').classList.toggle('open');
+    document.body.classList.toggle('hide-scrolling')
+    document.body.classList.toggle('hide-scrolling');
+    document.querySelector('.main').classList.toggle('fade-out');
+}
+
+document.querySelector('.popup-close').addEventListener('click', togglePopup);
+
+
+const portfolioItemDetails = (portfolioItem) => {
+
+    document.querySelector('.popup-thumbnail img').src = portfolioItem.querySelector('.portfolio-item-thumbnail img').src;
+
+    document.querySelector('.popup-header h3').innerText = portfolioItem.querySelector('.portfolio-item h3').innerText;
+
+    document.querySelector('.popup-body').innerHTML = portfolioItem.querySelector('.portfolio-item-details').innerHTML;
+
+
+}

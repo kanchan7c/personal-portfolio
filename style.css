@@ -3,7 +3,7 @@
 /* Variables  */
 
 :root {
-  --main-color: #e64ca6f6;
+  --main-color: black;
   --blue: #0000ff;
   --text-dark: rgba(0, 0, 0, 0.7);
   --orange: #ffa500;
@@ -36,20 +36,13 @@ body {
   min-height: 100vh;
   background-attachment: fixed;
   background-color: #ece8e8;
-  background-image: linear-gradient(
-    225deg,
-    rgba(167, 0, 0, 0.432),
-    rgba(255, 251, 0, 0.404),
-    rgba(29, 252, 40, 0.459),
-    rgba(34, 203, 255, 0.438),
-    rgba(250, 10, 238, 0.452),
-    rgba(255, 0, 43, 0.445)
-  );
+  background-image: url("https://images.unsplash.com/photo-1620207418302-439b387441b0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1934&q=80");
   font-size: 16px;
   color: var(--text-dark);
   line-height: 1.5;
   overflow-x: hidden;
   padding: 35px 15px;
+  color: whitesmoke;
 }
 
 body.hide-scrolling {
@@ -64,15 +57,7 @@ body::before {
   height: 100vh;
   width: 100%;
   background-color: #dfe8eb;
-  background-image: linear-gradient(
-    225deg,
-    rgba(167, 0, 0, 0.432),
-    rgba(255, 251, 0, 0.404),
-    rgba(29, 252, 40, 0.459),
-    rgba(34, 203, 255, 0.438),
-    rgba(250, 10, 238, 0.452),
-    rgba(255, 0, 43, 0.445)
-  );
+  background-image: rgba(6, 6, 77, 0.432);
   z-index: -1;
   opacity: 0.1;
 }
@@ -109,7 +94,6 @@ section {
   border: 1.5px solid rgba(255, 255, 255, 0.3);
   min-height: calc(100vh - 70px);
   border-radius: 30px;
-  backdrop-filter: var(--backdrop-filter-blur);
 }
 
 .main {
